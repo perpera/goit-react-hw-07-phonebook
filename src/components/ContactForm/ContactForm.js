@@ -33,7 +33,7 @@ export const ContactForm = () => {
         );
         if (isAdded) {
           actions.resetForm();
-          toast.error(`${values.name} is already in your contacts.`);
+          return toast.error(`${values.name} is already in your contacts.`);
         }
         dispatch(addContact(values));
         actions.resetForm();
